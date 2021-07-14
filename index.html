@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <div class="container">
+    <section class="cardContainer">
+      <div class="title">
+        <h3>SPLI</br>TTER</h3>
+      </div>
+      <div class="card">
+        <section class="sidebarLeft">
+          <header class="headerInput">
+            <span>Bill</span>
+            <div class="inputContainerValue">
+              <img src="/images/icon-dollar.svg" alt="Icon Dollar" />
+              <input data-js="inputTotalValue" type="text"  placeholder="0" />
+            </div>
+
+          </header>
+          <main class="mainContainerDiscount">
+            <span>Select Tip %</span>
+            <div data-js="containerSelectTip" class="cardContainerDiscount">
+              <div class="discount">5%</div>
+              <div class="discount">10%</div>
+              <div class="discount">15%</div>
+              <div class="discount">25%</div>
+              <div class="discount">50%</div>
+              <div class="discount">
+                <input data-js="customInput" type="number"  placeholder="Custom"/>
+              </div>
+            </div>
+          </main>
+          <footer data-js="inputThatReceiveWarning" class="inputContainerNumberOfPeople">
+            <div class="containerWarning">
+              <span>Number of People</span>
+              <span class="text-warning"></span>
+            </div>
+            <div class="inputContainerPeopleAmount">
+              <img src="/images/icon-person.svg" alt="Icon Person" />
+              <input data-js="inputAmountPeople" type="text"  placeholder="0" />
+            </div>
+          </footer>
+        </section>
+        <section class="sidebarRight">
+          <div class="containerResult">
+            <div class="containerValuePerPerson">
+              <div class="infoValuePerPerson">
+                <div class="info">
+                  <p>Tip Amount</p>
+                  <h4>/ person</h4>
+                </div>
+                <strong data-js="showTipAmount">$0.00</strong>
+              </div>
+              <div class="infoValuePerPerson">
+                <div class="info">
+                  <p>Total</p>
+                  <h4>/ person</h4>
+                </div>
+                <strong data-js="showTotal">$0.00</strong>
+              </div>
+            </div>
+            <button data-js="button-reset" class="button-reset">RESET</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
