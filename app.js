@@ -35,8 +35,10 @@ const calculateTotalValueWithDiscount = (discount, funcCalc) => {
 const showCalculateOnScreen =  (values) => {
     const { discountPerPerson, finalValuePerPerson } = calculateTotalValueWithDiscount(values, calculateValueWithoutDiscount)
 
+    console.log({ discountPerPerson, finalValuePerPerson })
     tagShowAmountPerson.innerText = discountPerPerson
     tagShowValueTotal.innerText = finalValuePerPerson
+
 }
 
 inputTotalValue.addEventListener('change', (event) => {
@@ -65,12 +67,10 @@ formSelectTip.addEventListener('click', (event) => {
     const discountValue = event.target.innerText.split('%')[0]
 
     if(inputBillValue !== 0 && inputNumberPeople > 0) {
-        if(valueFieldCustom === 0) {
-           false
-           console.log('equal zero')
-        } else {
-            showCalculateOnScreen(discountValue)
+        if(!!valueFieldCustom) {
+            return
         }
+        showCalculateOnScreen(discountValue)
     }
 
     if(inputBillValue === 0) {
@@ -102,7 +102,6 @@ formSelectTip.addEventListener('click', (event) => {
 
             if(textContentValue === discountValue) {
                 buttonDiscount.classList.add('selected')
-                console.log({ inputNumberPeople, inputBillValue })
             }
         })
     }
