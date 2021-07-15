@@ -67,9 +67,8 @@ formSelectTip.addEventListener('click', (event) => {
     const discountValue = event.target.innerText.split('%')[0]
 
     if(inputBillValue !== 0 && inputNumberPeople > 0) {
-        if(!!valueFieldCustom) {
-            return
-        }
+        if(!!valueFieldCustom) return;
+        
         showCalculateOnScreen(discountValue)
     }
 

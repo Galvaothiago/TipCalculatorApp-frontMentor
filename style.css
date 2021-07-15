@@ -52,10 +52,10 @@ body {
     font-weight: 800;
     color: var(--dark-cyan);
 
-    line-height: 30px;
-    letter-spacing: 4px;
+    line-height: 33px;
+    letter-spacing: 10px;
 
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .container .cardContainer > .card {
@@ -199,7 +199,6 @@ body {
     background: var(--light-grayish-cyan-v);
     border: 0;
     outline: transparent;
-    /* text-align: right; */
 
     border-radius: 5px;
     text-align: center;
